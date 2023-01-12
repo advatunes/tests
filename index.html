@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Место</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="root">
+    <header class="header">
+      <a class="header__logo" href="#">
+        <img class="header__logo-img" src="./images/header__logo.svg" alt="логотип" />
+      </a>
+    </header>
+
+    <main class="content">
+      <section class="profile content__profile">
+        <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар" />
+        <div class="profile__info">
+          <div class="profile__name-wrap">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button
+              class="profile__edit-button"
+              type="button"
+              aria-label="Редактировать профиль"
+            ></button>
+          </div>
+          <p class="profile__job">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button" type="button" aria-label="Добавить карточку"></button>
+      </section>
+
+      <section class="elements"></section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">© 2022 Mesto Russia</p>
+    </footer>
+
+    <!-- Popups -->
+    <div class="popup popup-name">
+      <div class="popup__container">
+        <form class="popup__form" name="popupForm" novalidate>
+          <h2 class="popup__title">Редактировать профиль</h2>
+
+          <input
+            class="popup__input popup-name__input-name"
+            name="name-input"
+            type="text"
+            minlength="2"
+            maxlength="40"
+            required
+          />
+          <span class="popup__error" id="name-input-error"></span>
+          <input
+            class="popup__input popup-name__input-job"
+            name="job-input"
+            type="text"
+            minlength="2"
+            maxlength="200"
+            required
+          />
+          <span class="popup__error" id="job-input-error"></span>
+
+          <button class="popup__submit popup__submit_name" type="submit" aria-label="Сохранить">
+            Сохранить
+          </button>
+          <button class="popup__close-icon" type="button" aria-label="закрыть"></button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="popup popup-place">
+      <div class="popup__container">
+        <form class="popup__form" name="popupForm" novalidate>
+          <h2 class="popup__title">Новое место</h2>
+          <label class="popup__form-field">
+            <input
+              class="popup__input popup-place__input-place"
+              name="place-input"
+              placeholder="Название"
+              type="text"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="popup__error" id="place-input-error"></span>
+          </label>
+          <label class="popup__form-field">
+            <input
+              class="popup__input popup-place__input-link"
+              name="link-input"
+              placeholder="Ссылка на картинку"
+              type="url"
+              required
+            />
+            <span class="popup__error" id="link-input-error"></span>
+          </label>
+
+          <button class="popup__submit popup__submit_place" type="submit" aria-label="Сохранить">
+            Создать
+          </button>
+          <button class="popup__close-icon" type="button" aria-label="закрыть"></button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="popup popup-image">
+      <div class="popup-image__container">
+        <img class="popup-image__pic" src="#" alt="#" />
+        <h2 class="popup-image__title"></h2>
+        <button class="popup__close-icon" type="button" aria-label="закрыть"></button>
+      </div>
+    </div>
+
+    <template id="element-template">
+      <article class="element">
+        <img class="element__image" src="#" alt="#" />
+        <button class="element__trash-icon" type="button" aria-label="удалить"></button>
+        <div class="element__info">
+          <h2 class="element__name"></h2>
+          <button class="element__like" type="button" aria-label="лайк"></button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/index.js" defer></script>
+  </body>
+</html>

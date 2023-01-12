@@ -1,0 +1,5 @@
+.profile__name-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
