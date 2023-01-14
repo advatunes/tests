@@ -29,7 +29,7 @@ class Card {
     this._element.querySelector('.element__image').addEventListener('click', () => {
       this._handleCardClick(this._name, this._link)
     });
-   
+
     this._element.querySelector('.element__like').addEventListener('click', (e) => {
       this._handleLikeButton(e);
     });
